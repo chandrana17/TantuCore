@@ -1,0 +1,155 @@
+/* Google Fonts - ALL fonts used across ALL stitch pages */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;700&family=DM+Mono:wght@400&family=Material+Symbols+Outlined:wght@100..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  /* Colors from fixed_hero_section_logo_integration_transparent (hero) */
+  --color-primary: #6b38d4;
+  --color-primary-container: #8455ef;
+  --color-on-primary: #ffffff;
+  --color-background: #fcf9f8;
+  --color-on-surface: #1a1c1a;
+  --color-on-surface-variant: #494454;
+  --color-outline-variant: #cbc3d7;
+  --color-surface-container-low: #f4f3f1;
+  --color-on-tertiary: #ffffff;
+  --color-error: #ba1a1a;
+  --color-on-secondary: #ffffff;
+  --color-on-tertiary-fixed-variant: #673d00;
+  --color-inverse-on-surface: #f2f1ee;
+  --color-surface-container: #efeeeb;
+  --color-on-secondary-fixed: #1a1b26;
+  --color-on-secondary-fixed-variant: #454652;
+  --color-inverse-primary: #d0bcff;
+  --color-error-container: #ffdad6;
+  --color-secondary-fixed-dim: #c6c5d4;
+  --color-tertiary: #855000;
+  --color-outline: #7b7486;
+  --color-primary-fixed: #e9ddff;
+  --color-surface-tint: #6d3bd7;
+  --color-surface-bright: #fcf9f8;
+  --color-surface-variant: #e3e2e0;
+  --color-secondary-container: #e2e1f1;
+  --color-secondary: #5d5d6a;
+  --color-tertiary-container: #a76500;
+  --color-on-tertiary-fixed: #2c1700;
+  --color-tertiary-fixed-dim: #ffb869;
+  --color-inverse-surface: #2f312f;
+  --color-primary-fixed-dim: #d0bcff;
+  --color-on-background: #1a1c1a;
+  --color-tertiary-fixed: #ffdcbb;
+  --color-on-primary-fixed-variant: #5516be;
+  --color-on-secondary-container: #636371;
+  --color-secondary-fixed: #e2e1f1;
+  --color-on-primary-fixed: #23005c;
+  --color-surface-dim: #dbdad7;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-error: #ffffff;
+  --color-surface-container-high: #e9e8e5;
+  --color-surface-container-highest: #e3e2e0;
+  --color-on-primary-container: #fffbff;
+  --color-on-error-container: #93000a;
+  --color-on-tertiary-container: #fffbff;
+  
+  /* Additional colors from libraries section */
+  --color-surface: #faf9f6; /* From libraries section */
+  
+  /* Border radius */
+  --radius-default: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+  
+  /* Font families */
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  /* Additional font mappings for other pages */
+  --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --font-public-sans: "Public Sans", sans-serif;
+  --font-dm-mono: "DM Mono", monospace;
+}
+
+/* Material Symbols defaults */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Blueprint grid pattern (hero variant — default) */
+.blueprint-grid {
+  background-image: linear-gradient(to right, rgba(107, 56, 212, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(107, 56, 212, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blueprint grid variant for loading screen */
+.blueprint-grid-loading {
+  background-image: linear-gradient(to right, rgba(176, 38, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blueprint grid variant for libraries */
+.blueprint-grid-libraries {
+  background-image: linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blueprint grid variant for community */
+.blueprint-grid-community {
+  background-image: linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blueprint grid variant for products */
+.blueprint-grid-products {
+  background-image: linear-gradient(to right, rgba(157, 0, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(157, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Shimmer animation (loading screen) */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+}
+
+/* Cinematic underline (products page) */
+.cinematic-underline {
+  position: relative;
+}
+
+.cinematic-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.cinematic-underline:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Grayscale discovery hover (products page) */
+.grayscale-discovery img {
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.grayscale-discovery:hover img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.02);
+}
