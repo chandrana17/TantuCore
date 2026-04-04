@@ -5,7 +5,7 @@ export default function LibrariesPrompts() {
     <section className="mb-32">
       <div className="flex items-end justify-between border-b border-outline-variant/20 pb-4 mb-12">
         <div className="flex items-center gap-4">
-          <MaterialIcon iconName="terminal" className="text-primary text-4xl" />
+          <MaterialIcon icon="terminal" className="text-primary text-4xl" />
           <h2 className="font-headline text-3xl font-bold tracking-tight">// PROMPTS</h2>
         </div>
         <span className="font-label text-on-surface-variant opacity-50">02 / 03</span>
