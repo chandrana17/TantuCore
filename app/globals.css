@@ -73,60 +73,159 @@
   --font-dm-mono: "DM Mono", monospace;
 }
 
+/* =========================================
+   Global Behaviors
+   ========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 56, 212, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 56, 212, 0.5);
+}
+
 /* Material Symbols defaults */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-/* Blueprint grid pattern (hero variant — default) */
+/* =========================================
+   Blueprint Grid Variants
+   ========================================= */
+
 .blueprint-grid {
   background-image: linear-gradient(to right, rgba(107, 56, 212, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(107, 56, 212, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* Blueprint grid variant for loading screen */
 .blueprint-grid-loading {
   background-image: linear-gradient(to right, rgba(176, 38, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* Blueprint grid variant for libraries */
 .blueprint-grid-libraries {
   background-image: linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* Blueprint grid variant for community */
 .blueprint-grid-community {
   background-image: linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* Blueprint grid variant for products */
 .blueprint-grid-products {
   background-image: linear-gradient(to right, rgba(157, 0, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(157, 0, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
 }
 
-/* Shimmer animation (loading screen) */
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(400%);
-  }
-}
+/* =========================================
+   Animations — Core
+   ========================================= */
 
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
 .animate-shimmer {
   animation: shimmer 2s infinite linear;
 }
 
-/* Cinematic underline (products page) */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(107, 56, 212, 0.4); }
+  50% { box-shadow: 0 0 20px 5px rgba(107, 56, 212, 0.2); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* =========================================
+   Animations — Scroll Reveal
+   ========================================= */
+
+.scroll-reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal-down {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* =========================================
+   Animations — Glitch (404)
+   ========================================= */
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #6b38d4, -2px 0 #8455ef; }
+  20% { text-shadow: -2px 2px #6b38d4, 2px -2px #8455ef; }
+  40% { text-shadow: 2px -2px #6b38d4, -2px 2px #8455ef; clip-path: inset(30% 0 40% 0); }
+  60% { text-shadow: -2px 0 #6b38d4, 2px 0 #8455ef; clip-path: inset(60% 0 10% 0); }
+  80% { text-shadow: 2px 2px #6b38d4, -2px -2px #8455ef; clip-path: inset(10% 0 70% 0); }
+  100% { text-shadow: 2px 0 #6b38d4, -2px 0 #8455ef; clip-path: none; }
+}
+.animate-glitch {
+  animation: glitch 2s infinite;
+}
+
+/* =========================================
+   Cinematic Underline (products)
+   ========================================= */
+
 .cinematic-underline {
   position: relative;
 }
-
 .cinematic-underline::after {
   content: '';
   position: absolute;
@@ -137,18 +236,19 @@
   background-color: currentColor;
   transition: width 0.3s ease, left 0.3s ease;
 }
-
 .cinematic-underline:hover::after {
   width: 100%;
   left: 0;
 }
 
-/* Grayscale discovery hover (products page) */
+/* =========================================
+   Grayscale Discovery (products)
+   ========================================= */
+
 .grayscale-discovery img {
   filter: grayscale(100%) contrast(1.1);
   transition: filter 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
-
 .grayscale-discovery:hover img {
   filter: grayscale(0%) contrast(1);
   transform: scale(1.02);

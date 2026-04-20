@@ -21,9 +21,8 @@ export default function HeroContent() {
         </div>
         
         <div className="pt-6 flex flex-wrap gap-2">
-          <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">Free forever</span>
-          <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">No cloud</span>
-          <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">No tracking</span>
+          <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">Premium Focus</span>
+          <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">0% Data Collected (For Now)</span>
           <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">Made in India</span>
           <span className="px-3 py-1 rounded-full border border-outline-variant/20 text-[10px] uppercase tracking-wider text-on-surface-variant opacity-70">Built alone</span>
         </div>
