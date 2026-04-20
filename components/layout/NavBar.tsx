@@ -1,15 +1,10 @@
 import Link from 'next/link';
-import { createClient } from '@/lib/supabase/server';
-import SignOutButton from '@/components/auth/SignOutButton';
 
 interface NavBarProps {
   activePage: 'home' | 'products' | 'libraries' | 'about';
 }
 
-export default async function NavBar({ activePage }: NavBarProps) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
+export default function NavBar({ activePage }: NavBarProps) {
   return (
     <nav className="fixed top-0 w-full z-50 bg-[#fcf9f8]/70 backdrop-blur-xl border-b border-primary/10">
       <div className="flex justify-between items-center px-8 py-4 max-w-[1440px] mx-auto">
@@ -46,16 +41,20 @@ export default async function NavBar({ activePage }: NavBarProps) {
           </Link>
         </div>
         
-        {user ? (
-          <SignOutButton />
-        ) : (
-          <Link 
-            href="/auth"
-            className="bg-primary text-on-primary px-6 py-2 text-sm font-headline font-bold scale-95 active:scale-90 transition-transform uppercase tracking-widest rounded-sm"
+        <div className="flex items-center space-x-4">
+          <div className="hidden sm:flex items-center space-x-2 text-[10px] font-headline tracking-widest text-[#1c1b1b]/70 border border-primary/20 px-3 py-1.5 rounded-full">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+            <span className="uppercase">v1.0.0 out now</span>
+          </div>
+          <a 
+            href="https://github.com/tantucore/tantuspank/releases/latest"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary text-on-primary px-6 py-2 text-sm font-headline font-bold scale-95 hover:scale-100 active:scale-90 transition-all uppercase tracking-widest rounded-full"
           >
-            Get Started
-          </Link>
-        )}
+            Download TantuSpank
+          </a>
+        </div>
       </div>
     </nav>
   );

@@ -6,7 +6,7 @@ export default function ProductsHeader() {
           <p>// small tools. real impact.</p>
         </span>
         <h1 className="text-[clamp(3rem,8vw,5.5rem)] font-headline font-bold leading-[0.9] tracking-tighter mb-8">
-          Software<div>that&nbsp;<span style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', letterSpacing: '-0.05em' }}>does one thing.&nbsp;</span><span style={{ fontSize: 'clamp(3rem, 8vw, 5.5rem)', letterSpacing: '-0.05em' }}>Really well.</span></div>
+          Software that does one thing. Really well.
         </h1>
       </div>
       <div className="md:col-span-4 flex items-end">

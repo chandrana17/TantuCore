@@ -3,8 +3,29 @@ import "./globals.css";
 import { validateEnv } from "@/lib/env";
 
 export const metadata: Metadata = {
-  title: "TANTUCORE | Explore the Core",
-  description: "Every app starts as a thread. We pull until something real comes out.",
+  title: "TANTUCORE",
+  description: "Small apps. Real impact.",
+  openGraph: {
+    title: "TANTUCORE",
+    description: "Small apps. Real impact.",
+    url: "https://tantu-core.vercel.app",
+    siteName: "TantuCore",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TantuCore",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TANTUCORE",
+    description: "Small apps. Real impact.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({

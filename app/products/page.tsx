@@ -1,3 +1,13 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Products � TantuCore",
+  description: "Download TantuSpank free � a Windows app that reacts to desk knocks with 10 sound packs. Also: TantuMind coming soon.",
+  openGraph: {
+    title: "Products � TantuCore",
+    description: "Download TantuSpank free � a Windows app that reacts to desk knocks with 10 sound packs. Also: TantuMind coming soon.",
+    url: "https://tantu-core.vercel.app/products",
+  }
+};
 import NavBar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
 import ProductsHeader from '@/components/products/ProductsHeader';
@@ -19,3 +29,4 @@ export default function Products() {
     </>
   );
 }
+
