@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "About — TantuCore",
-  description: "TantuCore. Built by Chand Rana. One person. India. Building in public.",
+  title: "About — TantuCore Studio",
+  description: "TantuCore. Built by Chand Rana, 18. Solo builder from Bhopal, India. Building in public.",
   openGraph: {
-    title: "About — TantuCore",
-    description: "TantuCore. Built by Chand Rana. One person. India. Building in public.",
+    title: "About — TantuCore Studio",
+    description: "TantuCore. Built by Chand Rana, 18. Solo builder from Bhopal, India. Building in public.",
     url: "https://tantu-core.vercel.app/about",
   }
 };
@@ -19,7 +19,7 @@ export default function About() {
   return (
     <>
       <NavBar activePage="about" />
-      <main className="pt-32 blueprint-grid min-h-screen">
+      <main className="pt-32 geo-grid min-h-screen bg-[#080A0F]">
         <ScrollReveal>
           <AboutHero />
         </ScrollReveal>

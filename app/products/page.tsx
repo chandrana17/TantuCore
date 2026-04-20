@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Products — TantuCore",
-  description: "Download TantuSpank free — a Windows app that reacts to desk knocks with 10 sound packs. Also: TantuMind coming soon.",
+  title: "Products — TantuCore Studio",
+  description: "Download TantuSpank free — a Windows knock detection tool. TantuMind (offline Android AI) coming soon.",
   openGraph: {
-    title: "Products — TantuCore",
-    description: "Download TantuSpank free — a Windows app that reacts to desk knocks with 10 sound packs. Also: TantuMind coming soon.",
+    title: "Products — TantuCore Studio",
+    description: "Download TantuSpank free — a Windows knock detection tool. TantuMind (offline Android AI) coming soon.",
     url: "https://tantu-core.vercel.app/products",
   }
 };
@@ -19,7 +19,7 @@ export default function Products() {
   return (
     <>
       <NavBar activePage="products" />
-      <main className="pt-32 pb-24 min-h-screen blueprint-grid">
+      <main className="pt-32 pb-24 min-h-screen geo-grid bg-[#080A0F]">
         <div className="max-w-[1440px] mx-auto px-8 md:px-12">
           <ScrollReveal>
             <ProductsHeader />

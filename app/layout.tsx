@@ -5,18 +5,18 @@ import { validateEnv } from "@/lib/env";
 export const metadata: Metadata = {
   metadataBase: new URL("https://tantu-core.vercel.app"),
   title: "TANTUCORE",
-  description: "Small apps. Real impact.",
+  description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
   openGraph: {
     title: "TANTUCORE",
-    description: "Small apps. Real impact.",
+    description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
     url: "https://tantu-core.vercel.app",
-    siteName: "TantuCore",
+    siteName: "TantuCore Studio",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TantuCore",
+        alt: "TantuCore Studio",
       },
     ],
     type: "website",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TANTUCORE",
-    description: "Small apps. Real impact.",
+    description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
     images: ["/og-image.png"],
   },
 };
@@ -32,19 +32,20 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "TantuCore",
+  name: "TantuCore Studio",
   url: "https://tantu-core.vercel.app",
   logo: "https://tantu-core.vercel.app/og-image.png",
-  description: "Small apps. Real impact. Local-first software built in public.",
+  description: "We Build AI Apps & Windows Tools. Free. Built in public. Failures included.",
   founder: {
     "@type": "Person",
     name: "Chand Rana",
   },
   sameAs: [
-    "https://x.com/TantuCore",
+    "https://x.com/tantucore",
     "https://youtube.com/@tantucore",
     "https://www.instagram.com/tantucore",
     "https://github.com/chandrana17",
+    "https://discord.gg/CEd2ZJw2Gx",
   ],
 };
 
@@ -55,22 +56,18 @@ export default function RootLayout({
 }>) {
   validateEnv();
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="dark">
       <head>
         {/* Preconnect for faster font loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-          rel="stylesheet"
-        />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+      <body className="bg-[#080A0F] text-[#f0f0f0] font-body antialiased">
         {children}
       </body>
     </html>

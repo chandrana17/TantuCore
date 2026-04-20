@@ -1,76 +1,48 @@
-/* Google Fonts - ALL fonts used across ALL stitch pages */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Public+Sans:wght@400;500;700&family=DM+Mono:wght@400&family=Material+Symbols+Outlined:wght@100..900&display=swap');
+/* Google Fonts — Space Grotesk (display), Manrope (body), JetBrains Mono (code) */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;500&family=Material+Symbols+Outlined:wght@100..900&display=swap');
 
 @import 'tailwindcss';
 
 @theme {
-  /* Colors from fixed_hero_section_logo_integration_transparent (hero) */
-  --color-primary: #6b38d4;
-  --color-primary-container: #8455ef;
-  --color-on-primary: #ffffff;
-  --color-background: #fcf9f8;
-  --color-on-surface: #1a1c1a;
-  --color-on-surface-variant: #494454;
-  --color-outline-variant: #cbc3d7;
-  --color-surface-container-low: #f4f3f1;
-  --color-on-tertiary: #ffffff;
-  --color-error: #ba1a1a;
-  --color-on-secondary: #ffffff;
-  --color-on-tertiary-fixed-variant: #673d00;
-  --color-inverse-on-surface: #f2f1ee;
-  --color-surface-container: #efeeeb;
-  --color-on-secondary-fixed: #1a1b26;
-  --color-on-secondary-fixed-variant: #454652;
-  --color-inverse-primary: #d0bcff;
-  --color-error-container: #ffdad6;
-  --color-secondary-fixed-dim: #c6c5d4;
-  --color-tertiary: #855000;
-  --color-outline: #7b7486;
-  --color-primary-fixed: #e9ddff;
-  --color-surface-tint: #6d3bd7;
-  --color-surface-bright: #fcf9f8;
-  --color-surface-variant: #e3e2e0;
-  --color-secondary-container: #e2e1f1;
-  --color-secondary: #5d5d6a;
-  --color-tertiary-container: #a76500;
-  --color-on-tertiary-fixed: #2c1700;
-  --color-tertiary-fixed-dim: #ffb869;
-  --color-inverse-surface: #2f312f;
-  --color-primary-fixed-dim: #d0bcff;
-  --color-on-background: #1a1c1a;
-  --color-tertiary-fixed: #ffdcbb;
-  --color-on-primary-fixed-variant: #5516be;
-  --color-on-secondary-container: #636371;
-  --color-secondary-fixed: #e2e1f1;
-  --color-on-primary-fixed: #23005c;
-  --color-surface-dim: #dbdad7;
-  --color-surface-container-lowest: #ffffff;
-  --color-on-error: #ffffff;
-  --color-surface-container-high: #e9e8e5;
-  --color-surface-container-highest: #e3e2e0;
-  --color-on-primary-container: #fffbff;
-  --color-on-error-container: #93000a;
-  --color-on-tertiary-container: #fffbff;
-  
-  /* Additional colors from libraries section */
-  --color-surface: #faf9f6; /* From libraries section */
-  
+  /* ======= TantuCore Dark Palette ======= */
+  --color-background: #080A0F;
+  --color-surface: #0d1017;
+  --color-surface-raised: #12151d;
+  --color-surface-glass: rgba(18, 21, 29, 0.6);
+  --color-accent: #E8FF47;
+  --color-accent-dim: rgba(232, 255, 71, 0.15);
+  --color-accent-glow: rgba(232, 255, 71, 0.3);
+  --color-text: #f0f0f0;
+  --color-text-muted: rgba(240, 240, 240, 0.5);
+  --color-text-dim: rgba(240, 240, 240, 0.3);
+  --color-border: rgba(240, 240, 240, 0.08);
+  --color-border-hover: rgba(232, 255, 71, 0.3);
+
+  /* Legacy compat (for pages that still reference old vars) */
+  --color-primary: #E8FF47;
+  --color-primary-container: #E8FF47;
+  --color-on-primary: #080A0F;
+  --color-on-surface: #f0f0f0;
+  --color-on-surface-variant: rgba(240, 240, 240, 0.5);
+  --color-outline-variant: rgba(240, 240, 240, 0.1);
+  --color-surface-container-low: #0d1017;
+  --color-surface-container: #12151d;
+  --color-surface-container-lowest: #080A0F;
+  --color-surface-container-high: #181c26;
+  --color-surface-container-highest: #1e222e;
+
   /* Border radius */
-  --radius-default: 0.125rem;
-  --radius-lg: 0.25rem;
-  --radius-xl: 0.5rem;
-  --radius-full: 0.75rem;
-  
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+
   /* Font families */
   --font-headline: "Space Grotesk", sans-serif;
   --font-body: "Manrope", sans-serif;
   --font-label: "Manrope", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
-  
-  /* Additional font mappings for other pages */
-  --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
-  --font-public-sans: "Public Sans", sans-serif;
-  --font-dm-mono: "DM Mono", monospace;
+  --font-mono: "JetBrains Mono", monospace;
 }
 
 /* =========================================
@@ -79,21 +51,28 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: #080A0F;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #080A0F;
+  color: #f0f0f0;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(107, 56, 212, 0.25);
+  background: rgba(232, 255, 71, 0.2);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(107, 56, 212, 0.5);
+  background: rgba(232, 255, 71, 0.4);
 }
 
 /* Material Symbols defaults */
@@ -101,33 +80,87 @@ html {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* Selection */
+::selection {
+  background: rgba(232, 255, 71, 0.3);
+  color: #f0f0f0;
+}
+
 /* =========================================
-   Blueprint Grid Variants
+   Geometric Grid — Hero Background
    ========================================= */
 
-.blueprint-grid {
-  background-image: linear-gradient(to right, rgba(107, 56, 212, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(107, 56, 212, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+.geo-grid {
+  background-image:
+    linear-gradient(to right, rgba(232, 255, 71, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 255, 71, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-.blueprint-grid-loading {
-  background-image: linear-gradient(to right, rgba(176, 38, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(176, 38, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+.geo-grid-dense {
+  background-image:
+    linear-gradient(to right, rgba(232, 255, 71, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 255, 71, 0.06) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
-.blueprint-grid-libraries {
-  background-image: linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* Legacy compat */
+.blueprint-grid { 
+  background-image:
+    linear-gradient(to right, rgba(232, 255, 71, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 255, 71, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
-.blueprint-grid-community {
-  background-image: linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* =========================================
+   Glass Cards
+   ========================================= */
+
+.glass-card {
+  background: rgba(18, 21, 29, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(240, 240, 240, 0.08);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.blueprint-grid-products {
-  background-image: linear-gradient(to right, rgba(157, 0, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(157, 0, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+.glass-card:hover {
+  border-color: rgba(232, 255, 71, 0.3);
+  box-shadow: 0 0 30px -10px rgba(232, 255, 71, 0.15);
+}
+
+/* =========================================
+   Buttons — Accent Glow Hover
+   ========================================= */
+
+.btn-accent {
+  background: #E8FF47;
+  color: #080A0F;
+  font-weight: 700;
+  transition: box-shadow 0.3s ease, transform 0.15s ease;
+}
+
+.btn-accent:hover {
+  box-shadow: 0 0 20px rgba(232, 255, 71, 0.4), 0 0 60px rgba(232, 255, 71, 0.15);
+  transform: translateY(-1px);
+}
+
+.btn-accent:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(240, 240, 240, 0.15);
+  color: #f0f0f0;
+  font-weight: 600;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: rgba(232, 255, 71, 0.5);
+  color: #E8FF47;
+  box-shadow: 0 0 15px rgba(232, 255, 71, 0.1);
 }
 
 /* =========================================
@@ -151,27 +184,33 @@ html {
 }
 
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+  animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(107, 56, 212, 0.4); }
-  50% { box-shadow: 0 0 20px 5px rgba(107, 56, 212, 0.2); }
+@keyframes pulse-accent {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 255, 71, 0.4); }
+  50% { box-shadow: 0 0 20px 5px rgba(232, 255, 71, 0.15); }
 }
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
+.animate-pulse-accent {
+  animation: pulse-accent 2.5s ease-in-out infinite;
+}
+
+@keyframes glow-line {
+  0% { opacity: 0; transform: scaleX(0); }
+  50% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0; transform: scaleX(0); }
 }
 
 /* =========================================
@@ -208,48 +247,29 @@ html {
    ========================================= */
 
 @keyframes glitch {
-  0% { text-shadow: 2px 0 #6b38d4, -2px 0 #8455ef; }
-  20% { text-shadow: -2px 2px #6b38d4, 2px -2px #8455ef; }
-  40% { text-shadow: 2px -2px #6b38d4, -2px 2px #8455ef; clip-path: inset(30% 0 40% 0); }
-  60% { text-shadow: -2px 0 #6b38d4, 2px 0 #8455ef; clip-path: inset(60% 0 10% 0); }
-  80% { text-shadow: 2px 2px #6b38d4, -2px -2px #8455ef; clip-path: inset(10% 0 70% 0); }
-  100% { text-shadow: 2px 0 #6b38d4, -2px 0 #8455ef; clip-path: none; }
+  0% { text-shadow: 2px 0 #E8FF47, -2px 0 #a0b800; }
+  20% { text-shadow: -2px 2px #E8FF47, 2px -2px #a0b800; }
+  40% { text-shadow: 2px -2px #E8FF47, -2px 2px #a0b800; clip-path: inset(30% 0 40% 0); }
+  60% { text-shadow: -2px 0 #E8FF47, 2px 0 #a0b800; clip-path: inset(60% 0 10% 0); }
+  80% { text-shadow: 2px 2px #E8FF47, -2px -2px #a0b800; clip-path: inset(10% 0 70% 0); }
+  100% { text-shadow: 2px 0 #E8FF47, -2px 0 #a0b800; clip-path: none; }
 }
 .animate-glitch {
   animation: glitch 2s infinite;
 }
 
 /* =========================================
-   Cinematic Underline (products)
+   Tag Pills
    ========================================= */
 
-.cinematic-underline {
-  position: relative;
-}
-.cinematic-underline::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-.cinematic-underline:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* =========================================
-   Grayscale Discovery (products)
-   ========================================= */
-
-.grayscale-discovery img {
-  filter: grayscale(100%) contrast(1.1);
-  transition: filter 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-.grayscale-discovery:hover img {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.02);
+.tag-pill {
+  font-size: 10px;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border: 1px solid rgba(240, 240, 240, 0.1);
+  border-radius: 4px;
+  color: rgba(240, 240, 240, 0.5);
+  background: rgba(240, 240, 240, 0.03);
 }
