@@ -13,7 +13,7 @@ export default function HeroContent() {
           transition={{ delay: 0.3, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="inline-block border border-[rgba(240,240,240,0.1)] px-3 py-1 bg-[#a855f7]/5 rounded-md"
         >
-          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#a855f7]">// We Build AI Apps &amp; Windows Tools</span>
+          <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#a855f7]">// ONE PERSON. REAL PRODUCTS.</span>
         </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 15 }}

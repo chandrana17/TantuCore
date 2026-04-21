@@ -10,7 +10,7 @@ export default function AboutHero() {
     'TantuCore is one person building software that should exist.',
     'Chand Rana. 18. Bhopal, India.',
     'Not a team. Not funded. Not trying to be the next big thing.',
-    'Just someone who builds at 3am because the idea won\u0027t leave them alone.',
+    'Just someone who builds at 3am because the ideas won\'t leave him alone.',
     <>TantuSpank started as a joke. It shipped.<br />TantuMind started as a need. It&apos;s coming.</>,
     <>Everything here is local, private, and free.<br />Not a marketing angle. Just how it should work.</>,
   ];

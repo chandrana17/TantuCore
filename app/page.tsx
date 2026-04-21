@@ -88,10 +88,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="tag-pill">C#</span>
-                  <span className="tag-pill">WPF</span>
-                  <span className="tag-pill">NAudio</span>
-                  <span className="tag-pill">Accelerometer</span>
+                  <span className="tag-pill">Python</span>
+                  <span className="tag-pill">sounddevice</span>
+                  <span className="tag-pill">numpy</span>
+                  <span className="tag-pill">pygame</span>
+                  <span className="tag-pill">Win32 API</span>
                 </div>
                 <div className="mt-auto flex gap-3">
                   <a href="/api/download/tantuspank" className="btn-accent px-6 py-3 font-headline font-bold text-xs uppercase tracking-widest rounded-md">
