@@ -3,13 +3,13 @@ import "./globals.css";
 import { validateEnv } from "@/lib/env";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tantu-core.vercel.app"),
+  metadataBase: new URL("https://tantucore.online"),
   title: "TANTUCORE",
   description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
   openGraph: {
     title: "TANTUCORE",
     description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
-    url: "https://tantu-core.vercel.app",
+    url: "https://tantucore.online",
     siteName: "TantuCore Studio",
     images: [
       {
@@ -33,8 +33,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "TantuCore Studio",
-  url: "https://tantu-core.vercel.app",
-  logo: "https://tantu-core.vercel.app/og-image.png",
+  url: "https://tantucore.online",
+  logo: "https://tantucore.online/og-image.png",
   description: "We Build AI Apps & Windows Tools. Free. Built in public. Failures included.",
   founder: {
     "@type": "Person",
