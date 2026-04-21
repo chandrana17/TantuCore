@@ -4,11 +4,15 @@ import { validateEnv } from "@/lib/env";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tantucore.online"),
-  title: "TANTUCORE",
-  description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
+  title: {
+    default: "TantuCore Studio — AI Apps & Windows Tools Built in Public",
+    template: "%s — TantuCore Studio",
+  },
+  description: "TantuCore Studio builds free AI apps and Windows tools in public. Download TantuSpank, join the TantuMind waitlist. Solo-built by Chand Rana from Bhopal, India.",
+  keywords: ["TantuCore", "TantuCore Studio", "TantuSpank", "TantuMind", "AI apps", "Windows tools", "free software", "built in public", "Chand Rana", "indie developer", "Bhopal"],
   openGraph: {
-    title: "TANTUCORE",
-    description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
+    title: "TantuCore Studio — AI Apps & Windows Tools Built in Public",
+    description: "TantuCore Studio builds free AI apps and Windows tools in public. Download TantuSpank, join the TantuMind waitlist.",
     url: "https://tantucore.online",
     siteName: "TantuCore Studio",
     images: [
@@ -16,15 +20,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TantuCore Studio",
+        alt: "TantuCore Studio — Building AI Apps & Windows Tools in Public",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TANTUCORE",
-    description: "We Build AI Apps & Windows Tools — Free. Built in public. Failures included.",
+    title: "TantuCore Studio — AI Apps & Windows Tools",
+    description: "TantuCore Studio builds free AI apps and Windows tools in public. Solo-built by Chand Rana.",
     images: ["/og-image.png"],
   },
 };

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "About — TantuCore Studio",
-  description: "TantuCore. Built by Chand Rana, 18. Solo builder from Bhopal, India. Building in public.",
+  title: "About",
+  description: "Meet Chand Rana — the solo builder behind TantuCore Studio. 18, B.Tech AI/ML, Bhopal. Building AI apps and Windows tools in public.",
   openGraph: {
-    title: "About — TantuCore Studio",
-    description: "TantuCore. Built by Chand Rana, 18. Solo builder from Bhopal, India. Building in public.",
-    url: "https://tantu-core.vercel.app/about",
+    title: "About TantuCore Studio — Meet the Solo Builder",
+    description: "Meet Chand Rana — the solo builder behind TantuCore Studio. Building AI apps and Windows tools in public from Bhopal, India.",
+    url: "https://tantucore.online/about",
   }
 };
 import NavBar from '@/components/layout/NavBar';

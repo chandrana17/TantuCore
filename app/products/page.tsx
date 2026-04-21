@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Products — TantuCore Studio",
-  description: "Download TantuSpank free — a Windows knock detection tool. TantuMind (offline Android AI) coming soon.",
+  title: "Products",
+  description: "TantuCore Studio products — download TantuSpank (free Windows knock detection tool) and join the TantuMind waitlist (offline Android AI). All free, all open source.",
   openGraph: {
-    title: "Products — TantuCore Studio",
-    description: "Download TantuSpank free — a Windows knock detection tool. TantuMind (offline Android AI) coming soon.",
-    url: "https://tantu-core.vercel.app/products",
+    title: "TantuCore Products — TantuSpank & TantuMind",
+    description: "Download TantuSpank free — a Windows knock detection tool. TantuMind (offline Android AI) coming soon. All open source.",
+    url: "https://tantucore.online/products",
   }
 };
 import NavBar from '@/components/layout/NavBar';

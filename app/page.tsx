@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "TantuCore Studio — We Build AI Apps & Windows Tools",
-  description: "Free. Built in public. Failures included. Local-first software from Bhopal, India.",
+  title: "Home",
+  description: "TantuCore Studio — free AI apps and Windows tools built in public by Chand Rana. Download TantuSpank, join the TantuMind waitlist. Local-first software from Bhopal, India.",
   openGraph: {
-    title: "TantuCore Studio — We Build AI Apps & Windows Tools",
-    description: "Free. Built in public. Failures included. Local-first software from Bhopal, India.",
-    url: "https://tantu-core.vercel.app/",
+    title: "TantuCore Studio — AI Apps & Windows Tools Built in Public",
+    description: "Free AI apps and Windows tools built in public. Local-first software from Bhopal, India.",
+    url: "https://tantucore.online/",
   }
 };
 import NavBar from '@/components/layout/NavBar';
