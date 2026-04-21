@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   },
   description: "TantuCore Studio builds free AI apps and Windows tools in public. Download TantuSpank, join the TantuMind waitlist. Solo-built by Chand Rana from Bhopal, India.",
   keywords: ["TantuCore", "TantuCore Studio", "TantuSpank", "TantuMind", "AI apps", "Windows tools", "free software", "built in public", "Chand Rana", "indie developer", "Bhopal"],
+  verification: {
+    google: "sUUP-ioOo-u6eIhJfZJMEFR4aiOAIk_TDfv4fBiS-eA",
+  },
   openGraph: {
     title: "TantuCore Studio — AI Apps & Windows Tools Built in Public",
     description: "TantuCore Studio builds free AI apps and Windows tools in public. Download TantuSpank, join the TantuMind waitlist.",
