@@ -44,7 +44,6 @@ const jsonLd = {
     "https://x.com/tantucore",
     "https://youtube.com/@tantucore",
     "https://www.instagram.com/tantucore",
-    "https://github.com/chandrana17",
     "https://discord.gg/CEd2ZJw2Gx",
   ],
 };

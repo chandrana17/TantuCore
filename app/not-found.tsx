@@ -5,20 +5,20 @@ export default function NotFound() {
     <main className="min-h-screen geo-grid flex flex-col items-center justify-center px-8 text-center bg-[#080A0F] text-[#f0f0f0] relative overflow-hidden">
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute w-2 h-2 rounded-full bg-[#E8FF47]/20 top-[20%] left-[15%] animate-float" style={{ animationDelay: '0s' }}></div>
-        <div className="absolute w-1.5 h-1.5 rounded-full bg-[#E8FF47]/15 top-[40%] right-[20%] animate-float" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute w-3 h-3 rounded-full bg-[#E8FF47]/10 bottom-[30%] left-[25%] animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute w-1 h-1 rounded-full bg-[#E8FF47]/30 top-[60%] right-[35%] animate-float" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute w-2.5 h-2.5 rounded-full bg-[#E8FF47]/15 bottom-[20%] right-[15%] animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute w-2 h-2 rounded-full bg-[#a855f7]/20 top-[20%] left-[15%] animate-float" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute w-1.5 h-1.5 rounded-full bg-[#a855f7]/15 top-[40%] right-[20%] animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute w-3 h-3 rounded-full bg-[#a855f7]/10 bottom-[30%] left-[25%] animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute w-1 h-1 rounded-full bg-[#a855f7]/30 top-[60%] right-[35%] animate-float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute w-2.5 h-2.5 rounded-full bg-[#a855f7]/15 bottom-[20%] right-[15%] animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <Link href="/" className="font-headline text-2xl font-bold tracking-tighter text-[#f0f0f0] mb-8 hover:text-[#E8FF47] transition-colors relative z-10">
+      <Link href="/" className="font-headline text-2xl font-bold tracking-tighter text-[#f0f0f0] mb-8 hover:text-[#a855f7] transition-colors relative z-10">
         TANTUCORE
       </Link>
 
-      <h1 className="text-8xl md:text-[10rem] font-headline font-black text-[#E8FF47] mb-4 animate-glitch relative z-10 select-none">404</h1>
+      <h1 className="text-8xl md:text-[10rem] font-headline font-black text-[#a855f7] mb-4 animate-glitch relative z-10 select-none">404</h1>
 
-      <p className="font-mono text-sm uppercase tracking-[0.2em] text-[#f0f0f0]/40 mb-12 relative z-10">
+      <p className="font-mono text-sm uppercase tracking-[0.2em] text-[#f0f0f0]/70 mb-12 relative z-10">
         This page got bonked out of existence.
       </p>
 
