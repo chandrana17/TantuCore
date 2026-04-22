@@ -18,15 +18,8 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Too many download requests. Please try again later.' }, { status: 429 });
     }
 
-    // 3. Get the public URL for the file in the "downloads" bucket
-    const { data } = supabaseAdmin
-      .storage
-      .from('downloads')
-      .getPublicUrl('TantuSpank_Setup_v1.0.0.exe');
-
-    if (!data.publicUrl) {
-      return NextResponse.json({ error: 'Download URL not found' }, { status: 404 });
-    }
+    // 3. Get the public URL from GitHub Releases
+    const downloadUrl = 'https://github.com/chandrana17/TantuSpank/releases/latest/download/TantuSpank_Setup_v1.0.0.exe';
 
     const safeUserAgent = (request.headers.get('user-agent') || 'unknown').substring(0, 500);
 
@@ -50,7 +43,7 @@ export async function GET(request: Request) {
     });
 
     // 5. Redirect the user securely (302 Found)
-    return NextResponse.redirect(data.publicUrl, { status: 302 });
+    return NextResponse.redirect(downloadUrl, { status: 302 });
   } catch (error) {
     console.error('[API Error] Error generating download link:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
